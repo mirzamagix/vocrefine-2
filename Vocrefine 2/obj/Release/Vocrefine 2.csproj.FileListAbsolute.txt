@@ -90,3 +90,34 @@ C:\PROJEKTE\VS2019\csharp\source\Vocrefine 2\Vocrefine 2\obj\Release\Vocrefine 2
 C:\PROJEKTE\VS2019\csharp\source\Vocrefine 2\Vocrefine 2\obj\Release\Vocrefine 2.csproj.CopyComplete
 C:\PROJEKTE\VS2019\csharp\source\Vocrefine 2\Vocrefine 2\obj\Release\Vocrefine 2.exe
 C:\PROJEKTE\VS2019\csharp\source\Vocrefine 2\Vocrefine 2\obj\Release\Vocrefine 2.pdb
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\Vocrefine 2.exe.config
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\Vocrefine 2.exe
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\Vocrefine 2.pdb
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\EntityFramework.dll
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\EntityFramework.SqlServer.dll
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\System.Data.SQLite.dll
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\System.Data.SQLite.EF6.dll
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\System.Data.SQLite.Linq.dll
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\EntityFramework.xml
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\EntityFramework.SqlServer.xml
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\System.Data.SQLite.xml
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\bin\Release\System.Data.SQLite.dll.config
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine 2.csprojAssemblyReference.cache
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.SettingsPage.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.LearnBox.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.EditBoxSettings.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.EditVocs.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.AddVocs.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.EditBox.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.SelectBox.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.InfoAbout.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.AddNew.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.CreateNew.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.FrontPage.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.MainWindow.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.ManageBox.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.Properties.Resources.resources
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine 2.csproj.GenerateResource.cache
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine 2.csproj.CopyComplete
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine 2.exe
+C:\PROJEKTE\VS2019\csharp\source\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine 2.pdb
