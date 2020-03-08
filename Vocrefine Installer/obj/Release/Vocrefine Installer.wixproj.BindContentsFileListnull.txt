@@ -1,0 +1,19 @@
+..\Vocrefine 2\bin\Release\EntityFramework.dll
+..\Vocrefine 2\bin\Release\EntityFramework.SqlServer.dll
+..\Vocrefine 2\bin\Release\EntityFramework.SqlServer.xml
+..\Vocrefine 2\bin\Release\EntityFramework.xml
+..\FONTS\ERASBD.TTF
+..\FONTS\ERASDEMI.TTF
+..\FONTS\ERASLGHT.TTF
+..\FONTS\ERASMD.TTF
+..\FONTS\FORTE.TTF
+..\Vocrefine 2\bin\Release\System.Data.SQLite.dll
+..\Vocrefine 2\bin\Release\System.Data.SQLite.dll.config
+..\Vocrefine 2\bin\Release\System.Data.SQLite.EF6.dll
+..\Vocrefine 2\bin\Release\System.Data.SQLite.Linq.dll
+..\Vocrefine 2\bin\Release\System.Data.SQLite.xml
+..\Vocrefine 2\bin\Release\Vocrefine 2.exe
+..\Vocrefine 2\bin\Release\Vocrefine 2.exe.config
+..\Vocrefine 2\bin\Release\Vocrefine 2.pdb
+..\Vocrefine 2\bin\Release\x64\SQLite.Interop.dll
+..\Vocrefine 2\bin\Release\x86\SQLite.Interop.dll

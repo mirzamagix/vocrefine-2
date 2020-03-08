@@ -1,0 +1,2 @@
+C:\PROJEKTE\VS2017\csharp\source\Vocrefine 2\Vocrefine Installer\bin\Release\Vocrefine_2_Windows_Setup.msi
+C:\PROJEKTE\VS2017\csharp\source\Vocrefine 2\Vocrefine Installer\bin\Release\Vocrefine_2_Windows_Setup.wixpdb

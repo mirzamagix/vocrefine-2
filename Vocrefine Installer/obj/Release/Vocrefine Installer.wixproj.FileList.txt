@@ -1,0 +1,6 @@
+obj\Release\Product.wixobj
+obj\Release\Vocrefine Installer.wixproj.BindContentsFileListnull.txt
+obj\Release\Vocrefine Installer.wixproj.BindOutputsFileListnull.txt
+obj\Release\Vocrefine Installer.wixproj.BindBuiltOutputsFileListnull.txt
+C:\PROJEKTE\VS2017\csharp\source\Vocrefine 2\Vocrefine Installer\bin\Release\Vocrefine_2_Windows_Setup.msi
+C:\PROJEKTE\VS2017\csharp\source\Vocrefine 2\Vocrefine Installer\bin\Release\Vocrefine_2_Windows_Setup.wixpdb

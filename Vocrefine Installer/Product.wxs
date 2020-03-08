@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="DB7F431E-6C92-402B-A408-2FA021BA9015" Name="Vocrefine 2" Language="1033" Version="1.1.0.0" Manufacturer="Mirza Systems" UpgradeCode="f7cbc66f-c383-4107-abce-eb67ffa7f4fe">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <Icon Id="icon.ico" SourceFile="vocrefine2.ico"/>
+    <Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+    <WixVariable Id="WixUIBannerBmp" Value="Images\installer_top-banner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="Images\installer_background.bmp" />
+
+    <UI Id="WixUI_SkipLicenseAgreement">
+      <UIRef Id="WixUI_InstallDir" />
+
+      <Publish Dialog="InstallDirDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="InstallDirDlg">NOT Installed</Publish>
+
+      <Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+    </UI>
+
+    <MajorUpgrade DowngradeErrorMessage="Eine neuere Version von Vocrefine 2 ist bereits installiert." />
+    <MediaTemplate EmbedCab="yes"/>
+
+		<Feature Id="ProductFeature" Title="Vocrefine 2 Installer" Level="1">
+			<ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="ApplicationShortcut" />
+      <ComponentRef Id="ApplicationShortcutDesktop" />
+      
+      <ComponentRef Id="x86SQLite.Interop" />
+      <ComponentRef Id="x64SQLite.Interop" />
+		</Feature>
+	</Product>
+
+  <!-- ProgramFiles Ordner -->
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+        <Directory Id="SubFolder" Name="Mirza Systems" >
+          <Directory Id="INSTALLFOLDER" Name="Vocrefine 2" >
+          <Directory Id="X64FOLDER" Name="x64"/>
+          <Directory Id="X86FOLDER" Name="x86"/>
+        </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="Mirza Systems" />
+      </Directory>
+      <Directory Id="DesktopFolder" Name="Desktop" />
+		</Directory>
+	</Fragment>
+
+  <!-- Shortcuts -->
+  <Fragment>
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="B4C96BA7-83A7-411C-A2FA-472E92C8F3DE">
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="Vocrefine 2" Description="Ein einfaches Vokabel-Lernprogramm" Target="[INSTALLFOLDER]Vocrefine 2.exe" WorkingDirectory="INSTALLFOLDER" />
+        <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\Mirza Systems\Vocrefine 2" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="ApplicationShortcutDesktop" Guid="BA870458-41E5-4E4E-88DA-1EFDFB5ADD3D">
+        <Shortcut Id="ApplicationDesktopShortcut" Name="Vocrefine 2" Description="Ein einfaches Vokabel-Lernprogramm" Target="[INSTALLFOLDER]Vocrefine 2.exe" WorkingDirectory="INSTALLFOLDER" />
+        <RemoveFolder Id="RemoveDesktopFolder" Directory="DesktopFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\Mirza Systems\Vocrefine 2" Name="installed" Type="integer" Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+
+  <!-- Alle Dateien -->
+  <Fragment>
+    <DirectoryRef Id="X86FOLDER">
+      <Component Id="x86SQLite.Interop" Guid="B31D864C-62DE-45D6-8FC7-F441D3986EFE">
+        <File Id="x86SQLite.Interop.dll" Source="..\Vocrefine 2\bin\Release\x86\SQLite.Interop.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="X64FOLDER">
+      <Component Id="x64SQLite.Interop" Guid="789A2723-57A3-4FDB-9302-4F306F605E15">
+        <File Id="x64SQLite.Interop.dll" Source="..\Vocrefine 2\bin\Release\x64\SQLite.Interop.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+    </DirectoryRef>
+
+    <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
+      <Component Id="Vocrefine_2" Guid="8A805135-51CD-4F84-BFD0-079E1DCC5969">
+        <File Id="Vocrefine2.exe" Source="..\Vocrefine 2\bin\Release\Vocrefine 2.exe" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="System.Data.SQLite" Guid="0AAEDB8E-7AAD-4396-82E2-DAED3B13A3DC">
+        <File Id="System.Data.SQLite.dll" Source="..\Vocrefine 2\bin\Release\System.Data.SQLite.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="EntityFramework" Guid="54D1AD8E-EEF8-4C43-835B-5BDB8B2E53D1">
+        <File Id="EntityFramework.dll" Source="..\Vocrefine 2\bin\Release\EntityFramework.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="dllEntityFramework.SqlServer" Guid="04789D35-3062-474D-A960-BA232635FF68">
+        <File Id="EntityFramework.SqlServer.dll" Source="..\Vocrefine 2\bin\Release\EntityFramework.SqlServer.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="xmlEntityFramework.SqlServer" Guid="6F9CA78C-94DA-44E0-8264-6EBCEBE5A716">
+        <File Id="EntityFramework.SqlServer.xml" Source="..\Vocrefine 2\bin\Release\EntityFramework.SqlServer.xml" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="xmlEntityFramework" Guid="A6345958-D4D3-40BC-A544-49166E1DE17F">
+        <File Id="EntityFramework.xml" Source="..\Vocrefine 2\bin\Release\EntityFramework.xml" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="configSystem.Data.SQLite" Guid="82357F09-016F-4835-A473-6D1765BD678E">
+        <File Id="System.Data.SQLite.dll.config" Source="..\Vocrefine 2\bin\Release\System.Data.SQLite.dll.config" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="System.Data.SQLite.EF6" Guid="1E1675B9-7CFD-4C81-ACF6-AAF147A631F0">
+        <File Id="System.Data.SQLite.EF6.dll" Source="..\Vocrefine 2\bin\Release\System.Data.SQLite.EF6.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="System.Data.SQLite.Linq" Guid="AA7C6EB0-694D-45EE-A834-AE31C77B1251">
+        <File Id="System.Data.SQLite.Linq.dll" Source="..\Vocrefine 2\bin\Release\System.Data.SQLite.Linq.dll" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="xmlSystem.Data.SQLite" Guid="126E6585-A8B6-4A77-8155-5FCC8EB40D57">
+        <File Id="System.Data.SQLite.xml" Source="..\Vocrefine 2\bin\Release\System.Data.SQLite.xml" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="configVocrefine2.exe" Guid="71C407DC-46AE-4C55-A429-BDC3E25B9D53">
+        <File Id="Vocrefine2.exe.config" Source="..\Vocrefine 2\bin\Release\Vocrefine 2.exe.config" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="pdbVocrefine2" Guid="45D0708F-5D2B-4E7E-889E-410908808D67">
+        <File Id="Vocrefine2.pdb" Source="..\Vocrefine 2\bin\Release\Vocrefine 2.pdb" KeyPath="yes" Checksum="yes"/>
+      </Component>
+
+      <!-- FONTS -->
+      <Component Id="TOOLFONTS" Guid="6DDD3981-C485-455B-8E39-D64D0E5A3846" >
+        <File Id="ERASBD.TTF" TrueType="yes" KeyPath="yes"
+          Source="..\FONTS\ERASBD.TTF" />
+        <File Id="ERASDEMI.TTF" TrueType="yes"
+          Source="..\FONTS\ERASDEMI.TTF" />
+        <File Id="ERASLGHT.TTF" TrueType="yes"
+          Source="..\FONTS\ERASLGHT.TTF" />
+        <File Id="ERASMD.TTF" TrueType="yes"
+          Source="..\FONTS\ERASMD.TTF" />
+        <File Id="FORTE.TTF" TrueType="yes"
+          Source="..\FONTS\FORTE.TTF" />
+      </Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
