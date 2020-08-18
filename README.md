@@ -20,7 +20,6 @@ Yet there are few interface languages from which you can select from. You can of
 - German (Deutsch)
 
 ### The Learning System
-Vocrefine uses the 10-shelves-system. How it works is visible in the Image below.
-A new flashcard starts always in Shelf 1. Every time the the User knows the right answer the flashcard moves one Shef up (2, 3, 4, etc.). As soon as a wrong answer is entered the card moves back to the first Shelf, no matter in which Shef it was before. To "master" a card you have to know the right answer ten times in a row (so ten days in a row if decide to do so) to move the card to the invisible 11th Shelf where it stays until you decide to reset the Box. 
+Vocrefine uses the 10-shelves-system. How it works? A new flashcard starts always in Shelf 1. Every time the the User knows the right answer the flashcard moves one Shef up (2, 3, 4, etc.). As soon as a wrong answer is entered the card moves back to the first Shelf, no matter in which Shef it was before. To "master" a card you have to know the right answer ten times in a row (so ten days in a row if decide to do so) to move the card to the invisible 11th Shelf where it stays until you decide to reset the Box. 
 
 ![-Image error-](https://github.com/mirzamagix/vocrefine-2/blob/master/github-images/Vocrefine_Shelves_System.png?raw=true)
