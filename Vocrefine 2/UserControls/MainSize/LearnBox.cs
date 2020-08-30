@@ -321,7 +321,7 @@ namespace Vocrefine_2
             lb_StatsAll.Text = actualAllValue.ToString();
 
             string contentLabel = lb_StatsRight.Text;
-            if (contentLabel != "0") contentLabel = contentLabel.Substring(0, contentLabel.Length - 6);
+            if (contentLabel != "0") contentLabel = contentLabel.Split(' ')[0];
             double actualRightValue = Convert.ToDouble(contentLabel.Trim());
 
             if (vocWasRight)
@@ -491,7 +491,6 @@ namespace Vocrefine_2
                                 if (MessageBox.Show("Du hast die Box nun einmal durchgelernt. Es ist empfohlen in regelmäßigen Abständen zu lernen. Möchtest du weiter lernen?", "Weiter lernen?",
                                     MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                                 {
-
                                     NextExercise();
                                 }
                                 else
@@ -500,6 +499,8 @@ namespace Vocrefine_2
                                 }
                             }
                         }
+
+                        NextExercise();
                     }
                 }
             }

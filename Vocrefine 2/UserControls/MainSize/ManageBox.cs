@@ -264,6 +264,9 @@ namespace Vocrefine_2
                 command.CommandText = "UPDATE Label SET value='never' WHERE name='lastLearned'";
                 command.ExecuteNonQuery();
 
+                command.CommandText = "UPDATE Label SET value='none' WHERE name='lastClass'";
+                command.ExecuteNonQuery();
+
                 command.Dispose();
                 connection.Close();
             }
