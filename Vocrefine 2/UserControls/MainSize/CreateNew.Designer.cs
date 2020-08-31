@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateNew));
             this.lb_save = new System.Windows.Forms.Label();
             this.pnl_topside = new System.Windows.Forms.Panel();
             this.pnl_CaptionBar = new System.Windows.Forms.Panel();
@@ -69,9 +70,10 @@
             this.lb_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_save.Font = new System.Drawing.Font("Eras Bold ITC", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_save.ForeColor = System.Drawing.Color.White;
-            this.lb_save.Location = new System.Drawing.Point(557, 29);
+            this.lb_save.Location = new System.Drawing.Point(1114, 56);
+            this.lb_save.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_save.Name = "lb_save";
-            this.lb_save.Size = new System.Drawing.Size(160, 40);
+            this.lb_save.Size = new System.Drawing.Size(320, 82);
             this.lb_save.TabIndex = 0;
             this.lb_save.Text = "WEITER";
             this.lb_save.Click += new System.EventHandler(this.act_saveBox);
@@ -93,8 +95,9 @@
             this.pnl_topside.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pnl_topside.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_topside.Location = new System.Drawing.Point(0, 0);
+            this.pnl_topside.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pnl_topside.Name = "pnl_topside";
-            this.pnl_topside.Size = new System.Drawing.Size(1278, 618);
+            this.pnl_topside.Size = new System.Drawing.Size(2556, 1191);
             this.pnl_topside.TabIndex = 1;
             // 
             // pnl_CaptionBar
@@ -105,15 +108,17 @@
             this.pnl_CaptionBar.Controls.Add(this.lb_Minimize);
             this.pnl_CaptionBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_CaptionBar.Location = new System.Drawing.Point(0, 0);
+            this.pnl_CaptionBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pnl_CaptionBar.Name = "pnl_CaptionBar";
-            this.pnl_CaptionBar.Size = new System.Drawing.Size(1278, 36);
+            this.pnl_CaptionBar.Size = new System.Drawing.Size(2556, 69);
             this.pnl_CaptionBar.TabIndex = 23;
             // 
             // pnl_DragBar
             // 
-            this.pnl_DragBar.Location = new System.Drawing.Point(97, 3);
+            this.pnl_DragBar.Location = new System.Drawing.Point(194, 6);
+            this.pnl_DragBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pnl_DragBar.Name = "pnl_DragBar";
-            this.pnl_DragBar.Size = new System.Drawing.Size(1122, 30);
+            this.pnl_DragBar.Size = new System.Drawing.Size(2244, 58);
             this.pnl_DragBar.TabIndex = 20;
             // 
             // lb_CloseWindow
@@ -123,9 +128,10 @@
             this.lb_CloseWindow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_CloseWindow.Font = new System.Drawing.Font("Eras Bold ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_CloseWindow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(15)))), ((int)(((byte)(16)))));
-            this.lb_CloseWindow.Location = new System.Drawing.Point(1248, 10);
+            this.lb_CloseWindow.Location = new System.Drawing.Point(2496, 19);
+            this.lb_CloseWindow.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_CloseWindow.Name = "lb_CloseWindow";
-            this.lb_CloseWindow.Size = new System.Drawing.Size(20, 19);
+            this.lb_CloseWindow.Size = new System.Drawing.Size(37, 36);
             this.lb_CloseWindow.TabIndex = 17;
             this.lb_CloseWindow.Text = "X";
             this.lb_CloseWindow.Click += new System.EventHandler(this.lb_CloseWindow_Click);
@@ -137,9 +143,10 @@
             this.lb_back.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_back.Font = new System.Drawing.Font("Eras Bold ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(15)))), ((int)(((byte)(16)))));
-            this.lb_back.Location = new System.Drawing.Point(12, 10);
+            this.lb_back.Location = new System.Drawing.Point(24, 19);
+            this.lb_back.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_back.Name = "lb_back";
-            this.lb_back.Size = new System.Drawing.Size(79, 19);
+            this.lb_back.Size = new System.Drawing.Size(152, 36);
             this.lb_back.TabIndex = 18;
             this.lb_back.Text = "< Zurück";
             // 
@@ -150,9 +157,10 @@
             this.lb_Minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_Minimize.Font = new System.Drawing.Font("Eras Bold ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Minimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(15)))), ((int)(((byte)(16)))));
-            this.lb_Minimize.Location = new System.Drawing.Point(1225, 10);
+            this.lb_Minimize.Location = new System.Drawing.Point(2450, 19);
+            this.lb_Minimize.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_Minimize.Name = "lb_Minimize";
-            this.lb_Minimize.Size = new System.Drawing.Size(17, 19);
+            this.lb_Minimize.Size = new System.Drawing.Size(31, 36);
             this.lb_Minimize.TabIndex = 19;
             this.lb_Minimize.Text = "_";
             // 
@@ -228,9 +236,10 @@
             "Urdu",
             "Usbekisch",
             "Vietnamesisch"});
-            this.comb_Fremdsprache.Location = new System.Drawing.Point(202, 245);
+            this.comb_Fremdsprache.Location = new System.Drawing.Point(404, 471);
+            this.comb_Fremdsprache.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comb_Fremdsprache.Name = "comb_Fremdsprache";
-            this.comb_Fremdsprache.Size = new System.Drawing.Size(222, 29);
+            this.comb_Fremdsprache.Size = new System.Drawing.Size(440, 53);
             this.comb_Fremdsprache.TabIndex = 17;
             this.comb_Fremdsprache.Text = "Manuell eingeben >>";
             this.comb_Fremdsprache.TextChanged += new System.EventHandler(this.act_IsFilled);
@@ -307,9 +316,10 @@
             "Urdu",
             "Usbekisch",
             "Vietnamesisch"});
-            this.comb_EigeneSprache.Location = new System.Drawing.Point(202, 195);
+            this.comb_EigeneSprache.Location = new System.Drawing.Point(404, 375);
+            this.comb_EigeneSprache.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.comb_EigeneSprache.Name = "comb_EigeneSprache";
-            this.comb_EigeneSprache.Size = new System.Drawing.Size(222, 29);
+            this.comb_EigeneSprache.Size = new System.Drawing.Size(440, 53);
             this.comb_EigeneSprache.TabIndex = 17;
             this.comb_EigeneSprache.Text = "Manuell eingeben >>";
             this.comb_EigeneSprache.TextChanged += new System.EventHandler(this.act_IsFilled);
@@ -319,9 +329,10 @@
             this.lb_Warnung.AutoSize = true;
             this.lb_Warnung.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_Warnung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Warnung.Location = new System.Drawing.Point(44, 103);
+            this.lb_Warnung.Location = new System.Drawing.Point(88, 198);
+            this.lb_Warnung.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_Warnung.Name = "lb_Warnung";
-            this.lb_Warnung.Size = new System.Drawing.Size(380, 15);
+            this.lb_Warnung.Size = new System.Drawing.Size(771, 32);
             this.lb_Warnung.TabIndex = 14;
             this.lb_Warnung.Text = "ACHTUNG: Diese Angaben können später nicht mehr geändert werden";
             this.lb_Warnung.Click += new System.EventHandler(this.lb_AddVocs_Switch_Click);
@@ -336,9 +347,10 @@
             this.pnl_addVocs.Controls.Add(this.tb_AddVocs_FS);
             this.pnl_addVocs.Controls.Add(this.tb_AddVocs_ES);
             this.pnl_addVocs.Controls.Add(this.lb_AddVocs);
-            this.pnl_addVocs.Location = new System.Drawing.Point(16, 319);
+            this.pnl_addVocs.Location = new System.Drawing.Point(32, 613);
+            this.pnl_addVocs.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pnl_addVocs.Name = "pnl_addVocs";
-            this.pnl_addVocs.Size = new System.Drawing.Size(1244, 234);
+            this.pnl_addVocs.Size = new System.Drawing.Size(2488, 546);
             this.pnl_addVocs.TabIndex = 14;
             this.pnl_addVocs.Visible = false;
             // 
@@ -350,9 +362,10 @@
             this.btn_AddVocs_Add.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_AddVocs_Add.Font = new System.Drawing.Font("Eras Demi ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddVocs_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_AddVocs_Add.Location = new System.Drawing.Point(971, 173);
+            this.btn_AddVocs_Add.Location = new System.Drawing.Point(1942, 398);
+            this.btn_AddVocs_Add.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.btn_AddVocs_Add.Name = "btn_AddVocs_Add";
-            this.btn_AddVocs_Add.Size = new System.Drawing.Size(241, 37);
+            this.btn_AddVocs_Add.Size = new System.Drawing.Size(482, 71);
             this.btn_AddVocs_Add.TabIndex = 15;
             this.btn_AddVocs_Add.Text = "VOKABEL HINZUFÜGEN";
             this.ttp_Info.SetToolTip(this.btn_AddVocs_Add, "Vokabeln hinzufügen");
@@ -364,12 +377,13 @@
             this.lb_AddNew_Warnung.AutoSize = true;
             this.lb_AddNew_Warnung.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_AddNew_Warnung.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_AddNew_Warnung.Location = new System.Drawing.Point(28, 54);
+            this.lb_AddNew_Warnung.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lb_AddNew_Warnung.Location = new System.Drawing.Point(56, 125);
+            this.lb_AddNew_Warnung.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_AddNew_Warnung.Name = "lb_AddNew_Warnung";
-            this.lb_AddNew_Warnung.Size = new System.Drawing.Size(438, 30);
+            this.lb_AddNew_Warnung.Size = new System.Drawing.Size(1111, 96);
             this.lb_AddNew_Warnung.TabIndex = 14;
-            this.lb_AddNew_Warnung.Text = "Sie können später jeder Zeit änderungen an der Vokabelliste vornehmen.\r\nBemerkung" +
-    "en oder Komentare in eckigen Klammern hinter die Vokabel schreiben.";
+            this.lb_AddNew_Warnung.Text = resources.GetString("lb_AddNew_Warnung.Text");
             this.lb_AddNew_Warnung.Click += new System.EventHandler(this.lb_AddVocs_Switch_Click);
             // 
             // lb_AddVocs_Switch
@@ -377,9 +391,10 @@
             this.lb_AddVocs_Switch.AutoSize = true;
             this.lb_AddVocs_Switch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lb_AddVocs_Switch.Font = new System.Drawing.Font("Eras Medium ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_AddVocs_Switch.Location = new System.Drawing.Point(604, 141);
+            this.lb_AddVocs_Switch.Location = new System.Drawing.Point(1208, 336);
+            this.lb_AddVocs_Switch.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_AddVocs_Switch.Name = "lb_AddVocs_Switch";
-            this.lb_AddVocs_Switch.Size = new System.Drawing.Size(35, 22);
+            this.lb_AddVocs_Switch.Size = new System.Drawing.Size(68, 44);
             this.lb_AddVocs_Switch.TabIndex = 14;
             this.lb_AddVocs_Switch.Text = "< >";
             this.lb_AddVocs_Switch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -390,9 +405,10 @@
             // 
             this.lb_AddVocs_FS.AutoSize = true;
             this.lb_AddVocs_FS.Font = new System.Drawing.Font("Eras Medium ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_AddVocs_FS.Location = new System.Drawing.Point(658, 113);
+            this.lb_AddVocs_FS.Location = new System.Drawing.Point(1316, 282);
+            this.lb_AddVocs_FS.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_AddVocs_FS.Name = "lb_AddVocs_FS";
-            this.lb_AddVocs_FS.Size = new System.Drawing.Size(135, 22);
+            this.lb_AddVocs_FS.Size = new System.Drawing.Size(269, 44);
             this.lb_AddVocs_FS.TabIndex = 13;
             this.lb_AddVocs_FS.Text = "Fremdsprache:";
             // 
@@ -400,9 +416,10 @@
             // 
             this.lb_AddVocs_ES.AutoSize = true;
             this.lb_AddVocs_ES.Font = new System.Drawing.Font("Eras Medium ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_AddVocs_ES.Location = new System.Drawing.Point(34, 113);
+            this.lb_AddVocs_ES.Location = new System.Drawing.Point(68, 282);
+            this.lb_AddVocs_ES.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_AddVocs_ES.Name = "lb_AddVocs_ES";
-            this.lb_AddVocs_ES.Size = new System.Drawing.Size(144, 22);
+            this.lb_AddVocs_ES.Size = new System.Drawing.Size(289, 44);
             this.lb_AddVocs_ES.TabIndex = 12;
             this.lb_AddVocs_ES.Text = "Eigene Sprache:";
             // 
@@ -410,10 +427,11 @@
             // 
             this.tb_AddVocs_FS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_AddVocs_FS.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tb_AddVocs_FS.Location = new System.Drawing.Point(652, 138);
+            this.tb_AddVocs_FS.Location = new System.Drawing.Point(1304, 330);
+            this.tb_AddVocs_FS.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tb_AddVocs_FS.MaxLength = 60;
             this.tb_AddVocs_FS.Name = "tb_AddVocs_FS";
-            this.tb_AddVocs_FS.Size = new System.Drawing.Size(560, 29);
+            this.tb_AddVocs_FS.Size = new System.Drawing.Size(1116, 50);
             this.tb_AddVocs_FS.TabIndex = 11;
             this.tb_AddVocs_FS.TextChanged += new System.EventHandler(this.act_AddVocs_isFilled);
             this.tb_AddVocs_FS.KeyDown += new System.Windows.Forms.KeyEventHandler(this.act_AddVocsKeyDown);
@@ -422,10 +440,11 @@
             // 
             this.tb_AddVocs_ES.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_AddVocs_ES.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tb_AddVocs_ES.Location = new System.Drawing.Point(28, 138);
+            this.tb_AddVocs_ES.Location = new System.Drawing.Point(56, 330);
+            this.tb_AddVocs_ES.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tb_AddVocs_ES.MaxLength = 60;
             this.tb_AddVocs_ES.Name = "tb_AddVocs_ES";
-            this.tb_AddVocs_ES.Size = new System.Drawing.Size(560, 29);
+            this.tb_AddVocs_ES.Size = new System.Drawing.Size(1116, 50);
             this.tb_AddVocs_ES.TabIndex = 10;
             this.tb_AddVocs_ES.TextChanged += new System.EventHandler(this.act_AddVocs_isFilled);
             this.tb_AddVocs_ES.KeyDown += new System.Windows.Forms.KeyEventHandler(this.act_AddVocsKeyDown);
@@ -435,9 +454,10 @@
             this.lb_AddVocs.AutoSize = true;
             this.lb_AddVocs.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_AddVocs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(15)))), ((int)(((byte)(16)))));
-            this.lb_AddVocs.Location = new System.Drawing.Point(21, 13);
+            this.lb_AddVocs.Location = new System.Drawing.Point(42, 25);
+            this.lb_AddVocs.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_AddVocs.Name = "lb_AddVocs";
-            this.lb_AddVocs.Size = new System.Drawing.Size(414, 38);
+            this.lb_AddVocs.Size = new System.Drawing.Size(826, 77);
             this.lb_AddVocs.TabIndex = 8;
             this.lb_AddVocs.Text = "Erste Vokabeln hinzufügen";
             // 
@@ -445,10 +465,11 @@
             // 
             this.tb_Fremdsprache.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Fremdsprache.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tb_Fremdsprache.Location = new System.Drawing.Point(430, 245);
+            this.tb_Fremdsprache.Location = new System.Drawing.Point(860, 471);
+            this.tb_Fremdsprache.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tb_Fremdsprache.MaxLength = 30;
             this.tb_Fremdsprache.Name = "tb_Fremdsprache";
-            this.tb_Fremdsprache.Size = new System.Drawing.Size(798, 29);
+            this.tb_Fremdsprache.Size = new System.Drawing.Size(1592, 50);
             this.tb_Fremdsprache.TabIndex = 13;
             this.tb_Fremdsprache.TextChanged += new System.EventHandler(this.act_IsFilled);
             // 
@@ -457,9 +478,10 @@
             this.lb_Fremdsprache.AutoSize = true;
             this.lb_Fremdsprache.Font = new System.Drawing.Font("Eras Medium ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Fremdsprache.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(15)))), ((int)(((byte)(16)))));
-            this.lb_Fremdsprache.Location = new System.Drawing.Point(50, 246);
+            this.lb_Fremdsprache.Location = new System.Drawing.Point(100, 473);
+            this.lb_Fremdsprache.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_Fremdsprache.Name = "lb_Fremdsprache";
-            this.lb_Fremdsprache.Size = new System.Drawing.Size(146, 24);
+            this.lb_Fremdsprache.Size = new System.Drawing.Size(298, 49);
             this.lb_Fremdsprache.TabIndex = 12;
             this.lb_Fremdsprache.Text = "Fremdsprache:";
             // 
@@ -467,10 +489,11 @@
             // 
             this.tb_EigeneSprache.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_EigeneSprache.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tb_EigeneSprache.Location = new System.Drawing.Point(430, 195);
+            this.tb_EigeneSprache.Location = new System.Drawing.Point(860, 375);
+            this.tb_EigeneSprache.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tb_EigeneSprache.MaxLength = 30;
             this.tb_EigeneSprache.Name = "tb_EigeneSprache";
-            this.tb_EigeneSprache.Size = new System.Drawing.Size(798, 29);
+            this.tb_EigeneSprache.Size = new System.Drawing.Size(1592, 50);
             this.tb_EigeneSprache.TabIndex = 11;
             this.tb_EigeneSprache.TextChanged += new System.EventHandler(this.act_IsFilled);
             // 
@@ -479,9 +502,10 @@
             this.lb_EigeneSprache.AutoSize = true;
             this.lb_EigeneSprache.Font = new System.Drawing.Font("Eras Medium ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_EigeneSprache.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(15)))), ((int)(((byte)(16)))));
-            this.lb_EigeneSprache.Location = new System.Drawing.Point(37, 196);
+            this.lb_EigeneSprache.Location = new System.Drawing.Point(74, 377);
+            this.lb_EigeneSprache.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_EigeneSprache.Name = "lb_EigeneSprache";
-            this.lb_EigeneSprache.Size = new System.Drawing.Size(159, 24);
+            this.lb_EigeneSprache.Size = new System.Drawing.Size(319, 49);
             this.lb_EigeneSprache.TabIndex = 10;
             this.lb_EigeneSprache.Text = "Eigene Sprache:";
             // 
@@ -489,10 +513,11 @@
             // 
             this.tb_Name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Name.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tb_Name.Location = new System.Drawing.Point(202, 145);
+            this.tb_Name.Location = new System.Drawing.Point(404, 279);
+            this.tb_Name.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.tb_Name.MaxLength = 30;
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(1026, 29);
+            this.tb_Name.Size = new System.Drawing.Size(2048, 50);
             this.tb_Name.TabIndex = 9;
             this.tb_Name.TextChanged += new System.EventHandler(this.act_IsFilled);
             // 
@@ -501,9 +526,10 @@
             this.lb_Name.AutoSize = true;
             this.lb_Name.Font = new System.Drawing.Font("Eras Medium ITC", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(15)))), ((int)(((byte)(16)))));
-            this.lb_Name.Location = new System.Drawing.Point(93, 146);
+            this.lb_Name.Location = new System.Drawing.Point(186, 281);
+            this.lb_Name.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_Name.Name = "lb_Name";
-            this.lb_Name.Size = new System.Drawing.Size(103, 24);
+            this.lb_Name.Size = new System.Drawing.Size(206, 49);
             this.lb_Name.TabIndex = 8;
             this.lb_Name.Text = "Boxname:";
             // 
@@ -512,9 +538,10 @@
             this.lb_Title.AutoSize = true;
             this.lb_Title.Font = new System.Drawing.Font("Forte", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Title.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(15)))), ((int)(((byte)(16)))));
-            this.lb_Title.Location = new System.Drawing.Point(37, 66);
+            this.lb_Title.Location = new System.Drawing.Point(74, 127);
+            this.lb_Title.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_Title.Name = "lb_Title";
-            this.lb_Title.Size = new System.Drawing.Size(306, 38);
+            this.lb_Title.Size = new System.Drawing.Size(611, 77);
             this.lb_Title.TabIndex = 7;
             this.lb_Title.Text = "Neue Box erstellen";
             // 
@@ -525,21 +552,23 @@
             this.pnl_save.Controls.Add(this.lb_save);
             this.pnl_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl_save.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnl_save.Location = new System.Drawing.Point(0, 618);
+            this.pnl_save.Location = new System.Drawing.Point(0, 1191);
+            this.pnl_save.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.pnl_save.Name = "pnl_save";
-            this.pnl_save.Size = new System.Drawing.Size(1278, 100);
+            this.pnl_save.Size = new System.Drawing.Size(2556, 190);
             this.pnl_save.TabIndex = 0;
             this.pnl_save.Click += new System.EventHandler(this.act_saveBox);
             // 
             // CreateNew
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pnl_topside);
             this.Controls.Add(this.pnl_save);
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "CreateNew";
-            this.Size = new System.Drawing.Size(1278, 718);
+            this.Size = new System.Drawing.Size(2556, 1381);
             this.pnl_topside.ResumeLayout(false);
             this.pnl_topside.PerformLayout();
             this.pnl_CaptionBar.ResumeLayout(false);

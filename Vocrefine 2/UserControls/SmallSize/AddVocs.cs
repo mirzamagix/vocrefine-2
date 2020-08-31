@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace Vocrefine_2
 {
@@ -66,7 +67,7 @@ namespace Vocrefine_2
             if (tb_AddVocs_ES.Text != "" && tb_AddVocs_FS.Text != "")
             {
                 btn_AddVocs_Add.Enabled = true;
-                btn_AddVocs_Add.BackColor = Color.Green;
+                btn_AddVocs_Add.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "CreateNew");
                 btn_AddVocs_Add.ForeColor = Color.White;
             }
             else
@@ -111,6 +112,8 @@ namespace Vocrefine_2
         /// </summary>
         private void AddVocableToList()
         {
+            Miscellaneous.DoThisSpaceStuff(ref tb_AddVocs_ES, ref tb_AddVocs_FS);
+
             Dictionary<string, string> VocabularyMap = new Dictionary<string, string>();
             VocabularyMap.Add(tb_AddVocs_ES.Text.Trim(), tb_AddVocs_FS.Text.Trim());
 

@@ -67,14 +67,14 @@ namespace Vocrefine_2
 
         private void lb_Color_Reset_Click(object sender, EventArgs e)
         {
-            pnl_ColorPreview_FrontPage.BackColor = Color.DarkOrange;
-            pnl_ColorPreview_AddNew.BackColor = Color.Green;
-            pnl_ColorPreview_CreateNew.BackColor = Color.Green;
-            pnl_ColorPreview_SelectBox.BackColor = Color.Teal;
-            pnl_ColorPreview_ManageBox.BackColor = Color.Teal;
-            pnl_ColorPreview_AddVocs.BackColor = Color.PaleTurquoise;
-            pnl_ColorPreview_EditVocs.BackColor = Color.Thistle;
-            pnl_ColorPreview_LearnBox.BackColor = Color.Teal;
+            pnl_ColorPreview_FrontPage.BackColor = Miscellaneous.CustomColors.FrontPage;
+            pnl_ColorPreview_AddNew.BackColor = Miscellaneous.CustomColors.AddNew;
+            pnl_ColorPreview_CreateNew.BackColor = Miscellaneous.CustomColors.CreateNew;
+            pnl_ColorPreview_SelectBox.BackColor = Miscellaneous.CustomColors.SelectBox;
+            pnl_ColorPreview_ManageBox.BackColor = Miscellaneous.CustomColors.ManageBox;
+            pnl_ColorPreview_AddVocs.BackColor = Miscellaneous.CustomColors.AddVocs;
+            pnl_ColorPreview_EditVocs.BackColor = Miscellaneous.CustomColors.EditVocs;
+            pnl_ColorPreview_LearnBox.BackColor = Miscellaneous.CustomColors.LearnBox;
 
             pnl_continue.BackColor = Color.Green;
         }

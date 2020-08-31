@@ -120,6 +120,12 @@
   <metadata name="ttp_Info.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="lb_AddNew_Warnung.Text" xml:space="preserve">
+    <value>Sie können später jeder Zeit änderungen an der Vokabelliste vornehmen.
+Bemerkungen oder Komentare in eckigen Klammern hinter die Vokabel schreiben.
+Du kannst auch mehrer Bedeutungen gleichzeitig verwenden indem du sie mit einem &gt;&gt; | &lt;&lt; trennst.
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>47</value>
   </metadata>

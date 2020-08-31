@@ -74,14 +74,15 @@ namespace Vocrefine_2
                 Directory.CreateDirectory(settingsDirectoryPath);
 
                 DBAdapter.CreateSettingsDatabase(settingspath);
-                DBAdapter.AddSettingsColor(settingspath, "FrontPage", Color.DarkOrange);
-                DBAdapter.AddSettingsColor(settingspath, "AddNew", Color.Green);
-                DBAdapter.AddSettingsColor(settingspath, "CreateNew", Color.Green);
-                DBAdapter.AddSettingsColor(settingspath, "SelectBox", Color.Teal);
-                DBAdapter.AddSettingsColor(settingspath, "ManageBox", Color.Teal);
-                DBAdapter.AddSettingsColor(settingspath, "AddVocs", Color.PaleTurquoise);
-                DBAdapter.AddSettingsColor(settingspath, "EditVocs", Color.Thistle);
-                DBAdapter.AddSettingsColor(settingspath, "LearnBox", Color.Teal);
+                DBAdapter.AddSettingsColor(settingspath, "FrontPage", Miscellaneous.CustomColors.FrontPage);
+                DBAdapter.AddSettingsColor(settingspath, "AddNew", Miscellaneous.CustomColors.AddNew);
+                DBAdapter.AddSettingsColor(settingspath, "CreateNew", Miscellaneous.CustomColors.CreateNew);
+                DBAdapter.AddSettingsColor(settingspath, "SelectBox", Miscellaneous.CustomColors.SelectBox);
+                DBAdapter.AddSettingsColor(settingspath, "ManageBox", Miscellaneous.CustomColors.ManageBox);
+                DBAdapter.AddSettingsColor(settingspath, "AddVocs", Miscellaneous.CustomColors.AddVocs);
+                DBAdapter.AddSettingsColor(settingspath, "EditVocs", Miscellaneous.CustomColors.EditVocs);
+                DBAdapter.AddSettingsColor(settingspath, "LearnBox", Miscellaneous.CustomColors.LearnBox);
+                DBAdapter.AddSettingsColor(settingspath, "EditBoxSetiings", Miscellaneous.CustomColors.EditBoxSettings);
             }
 
             frontPage = new FrontPage();

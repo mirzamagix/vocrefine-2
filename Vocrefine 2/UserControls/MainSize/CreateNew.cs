@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SQLite;
+using System.Text.RegularExpressions;
 
 namespace Vocrefine_2
 {
@@ -139,6 +140,14 @@ namespace Vocrefine_2
         /// </summary>
         private void AddVocableToList()
         {
+            Miscellaneous.DoThisSpaceStuff(ref tb_AddVocs_ES, ref tb_AddVocs_FS);
+
+            if (tb_AddVocs_ES.Text.Contains(" /") || tb_AddVocs_ES.Text.Contains("/ ") || tb_AddVocs_ES.Text.Contains(" / ") || tb_AddVocs_FS.Text.Contains(" /") || tb_AddVocs_FS.Text.Contains("/ ") || tb_AddVocs_FS.Text.Contains(" / "))
+            {
+                MessageBox.Show("Bitte setze keine leerzeichen vor und nach der Bedeutungtrennung", "Kann nicht gespeichert werden");
+                return;
+            }
+
             VocabularyMap.Add(tb_AddVocs_ES.Text.Trim(), tb_AddVocs_FS.Text.Trim());
 
             tb_AddVocs_ES.Text = "";

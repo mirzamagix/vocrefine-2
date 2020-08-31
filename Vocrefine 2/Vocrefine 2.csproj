@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Miscellaneous.cs" />
     <Compile Include="UserControls\SmallSize\EditBoxSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>

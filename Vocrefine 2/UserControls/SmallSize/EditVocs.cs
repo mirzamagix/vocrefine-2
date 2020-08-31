@@ -193,13 +193,13 @@ namespace Vocrefine_2
             tb_EigeneSprache.Text = currentVoc;
             tb_Fremdsprache.Text = sTranslation;
 
-            lb_title_ES.Text = DBAdapter.GetLabelEntry(dbFilePath, "nativeLanguage");
-            lb_title_FS.Text = DBAdapter.GetLabelEntry(dbFilePath, "translationLanguage");
+            lb_title_ES.Text = DBAdapter.GetLabelEntry(dbFilePath, "nativeLanguage") + ":";
+            lb_title_FS.Text = DBAdapter.GetLabelEntry(dbFilePath, "translationLanguage") + ":";
 
             btn_save.Enabled = false;
             btn_save.ForeColor = Color.Gray;
             pnl_Info.Visible = true;
-            lb_Info_Title.Text = "Vokabel hier bearbeiten:";
+            lb_Info_Title.Text = "Vokabel bearbeiten:";
         }
 
         /// <summary>
@@ -219,13 +219,13 @@ namespace Vocrefine_2
             tb_EigeneSprache.Text = currentVoc;
             tb_Fremdsprache.Text = sTranslation;
 
-            lb_title_ES.Text = DBAdapter.GetLabelEntry(dbFilePath, "nativeLanguage");
-            lb_title_FS.Text = DBAdapter.GetLabelEntry(dbFilePath, "translationLanguage");
+            lb_title_ES.Text = DBAdapter.GetLabelEntry(dbFilePath, "nativeLanguage") + ":";
+            lb_title_FS.Text = DBAdapter.GetLabelEntry(dbFilePath, "translationLanguage") + ":";
 
             btn_save.Enabled = false;
             btn_save.ForeColor = Color.Gray;
             pnl_Info.Visible = true;
-            lb_Info_Title.Text = "Vokabel hier bearbeiten:";
+            lb_Info_Title.Text = "Vokabel bearbeiten:";
         }
 
         /// <summary>
@@ -250,33 +250,43 @@ namespace Vocrefine_2
             {
                 case 1:
                     Fach1.Remove(currentVoc);
+                    if (Fach1.Count == 0) DBAdapter.UpdateLabel(dbFilePath, "lastClass", "none");
                     break;
                 case 2:
                     Fach2.Remove(currentVoc);
+                    if (Fach2.Count == 0) DBAdapter.UpdateLabel(dbFilePath, "lastClass", "none");
                     break;
                 case 3:
                     Fach3.Remove(currentVoc);
+                    if (Fach3.Count == 0) DBAdapter.UpdateLabel(dbFilePath, "lastClass", "none");
                     break;
                 case 4:
                     Fach4.Remove(currentVoc);
+                    if (Fach4.Count == 0) DBAdapter.UpdateLabel(dbFilePath, "lastClass", "none");
                     break;
                 case 5:
                     Fach5.Remove(currentVoc);
+                    if (Fach5.Count == 0) DBAdapter.UpdateLabel(dbFilePath, "lastClass", "none");
                     break;
                 case 6:
                     Fach6.Remove(currentVoc);
+                    if (Fach6.Count == 0) DBAdapter.UpdateLabel(dbFilePath, "lastClass", "none");
                     break;
                 case 7:
                     Fach7.Remove(currentVoc);
+                    if (Fach7.Count == 0) DBAdapter.UpdateLabel(dbFilePath, "lastClass", "none");
                     break;
                 case 8:
                     Fach8.Remove(currentVoc);
+                    if (Fach8.Count == 0) DBAdapter.UpdateLabel(dbFilePath, "lastClass", "none");
                     break;
                 case 9:
                     Fach9.Remove(currentVoc);
+                    if (Fach9.Count == 0) DBAdapter.UpdateLabel(dbFilePath, "lastClass", "none");
                     break;
                 case 10:
                     Fach10.Remove(currentVoc);
+                    if (Fach10.Count == 0) DBAdapter.UpdateLabel(dbFilePath, "lastClass", "none");
                     break;
             }
 
@@ -294,6 +304,8 @@ namespace Vocrefine_2
         /// <param name="e"></param>
         private void act_SaveVoc(object sender, EventArgs e)
         {
+            Miscellaneous.DoThisSpaceStuff(ref tb_EigeneSprache, ref tb_Fremdsprache);
+
             switch (classNumber)
             {
                 case 1:

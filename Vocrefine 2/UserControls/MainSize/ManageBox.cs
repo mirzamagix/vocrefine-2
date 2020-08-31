@@ -136,7 +136,7 @@ namespace Vocrefine_2
         /// <param name="e"></param>
         private void act_MouseEnter_Reset(object sender, EventArgs e)
         {
-            pnl_Reset.BackColor = Color.DarkRed;
+            pnl_Reset.BackColor = Miscellaneous.CustomColors.Red;
             pb_Reset.Image = Vocrefine_2.Properties.Resources.reset_white;
             lb_Reset.ForeColor = Color.White;
             lb_back.ForeColor = Color.White;
@@ -155,7 +155,7 @@ namespace Vocrefine_2
 
             pnl_DragBar_Right.BackColor = Color.Transparent;
             pnl_DragBar_Middle.BackColor = Color.Transparent;
-            pnl_DragBar_Left.BackColor = Color.DarkRed;
+            pnl_DragBar_Left.BackColor = Miscellaneous.CustomColors.Red;
         }
         /// <summary>
         /// Überprüft, ob über "Delete" gehovert wurde
@@ -164,7 +164,7 @@ namespace Vocrefine_2
         /// <param name="e"></param>
         private void act_MouseEnter_Delete(object sender, EventArgs e)
         {
-            pnl_Delete.BackColor = Color.DarkRed;
+            pnl_Delete.BackColor = Miscellaneous.CustomColors.Red;
             pb_Delete.Image = Vocrefine_2.Properties.Resources.delete_white;
             lb_Delete.ForeColor = Color.White;
 

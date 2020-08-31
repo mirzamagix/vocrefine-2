@@ -271,6 +271,10 @@ namespace Vocrefine_2
                 tb_Fremdsprache.Focus();
                 tb_EigeneSprache.Text = currentVoc;
                 if (!cb_BemerkungenAnzeigen.Checked) tb_EigeneSprache.Text = Regex.Replace(tb_EigeneSprache.Text, @"\[.*?\]", "").Trim();
+
+                tb_EigeneSprache.Text = string.Join(" | ", tb_EigeneSprache.Text.Split('|'));
+                tb_EigeneSprache.ReadOnly = true;
+                tb_Fremdsprache.ReadOnly = false;
             }
             else
             {
@@ -278,6 +282,10 @@ namespace Vocrefine_2
                 tb_EigeneSprache.Focus();
                 tb_Fremdsprache.Text = transVoc;
                 if (!cb_BemerkungenAnzeigen.Checked) tb_Fremdsprache.Text = Regex.Replace(tb_Fremdsprache.Text, @"\[.*?\]", "").Trim();
+
+                tb_Fremdsprache.Text = string.Join(" | ", tb_Fremdsprache.Text.Split('|'));
+                tb_Fremdsprache.ReadOnly = true;
+                tb_EigeneSprache.ReadOnly = false; ;
             }
         }
 
@@ -360,33 +368,31 @@ namespace Vocrefine_2
                 // Abfragerichtung bestimmen
                 if (direction)
                 {
-                    string writedAnswer = tb_Fremdsprache.Text;
+                    string writtenAnswer = tb_Fremdsprache.Text;
                     string withoutComment = Regex.Replace(transVoc, @"\[.*?\]", "").Trim();
 
                     if (!cb_GrossKleinSchreibung.Checked) withoutComment = withoutComment.ToLower();
-                    if (!cb_GrossKleinSchreibung.Checked) writedAnswer = writedAnswer.ToLower();
+                    if (!cb_GrossKleinSchreibung.Checked) writtenAnswer = writtenAnswer.ToLower();
 
-                    if (writedAnswer == withoutComment) wasRight = true;
-                    else
-                    {
-                        wasRight = false;
-                        tb_Fremdsprache.Text = withoutComment;
-                    }
+                    // Aufteilung in mehrere Bedeutungen für das selbe Wort
+                    if (withoutComment.Split(Miscellaneous._multipleMeaningSeperator).Contains(writtenAnswer)) wasRight = true;
+                    else wasRight = false;
+
+                    tb_Fremdsprache.Text = string.Join(" | ", withoutComment.Split('|'));
                 }
                 else
                 {
-                    string writedAnswer = tb_EigeneSprache.Text;
+                    string writtenAnswer = tb_EigeneSprache.Text;
                     string withoutComment = Regex.Replace(currentVoc, @"\[.*?\]", "").Trim();
 
                     if (!cb_GrossKleinSchreibung.Checked) withoutComment = withoutComment.ToLower();
-                    if (!cb_GrossKleinSchreibung.Checked) writedAnswer = writedAnswer.ToLower();
+                    if (!cb_GrossKleinSchreibung.Checked) writtenAnswer = writtenAnswer.ToLower();
 
-                    if (writedAnswer == withoutComment) wasRight = true;
-                    else
-                    {
-                        wasRight = false;
-                        tb_EigeneSprache.Text = withoutComment;
-                    }
+                    // Aufteilung in mehrere Bedeutungen für das selbe Wort
+                    if (withoutComment.Split(Miscellaneous._multipleMeaningSeperator).Contains(writtenAnswer)) wasRight = true;
+                    else wasRight = false;
+
+                    tb_EigeneSprache.Text = string.Join(" | ", withoutComment.Split('|'));
                 }
 
                 // Farbe ändern
