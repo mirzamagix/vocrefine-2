@@ -67,7 +67,7 @@ namespace Vocrefine_2
 
             // Liste mit Eigenen Vokabeln
             List<string> resultNative = new List<string>();
-            command.CommandText = String.Format("SELECT * FROM Vocabulary WHERE class={0};", iClass.ToString());
+            command.CommandText = String.Format("SELECT * FROM Vocabulary;");
             var readerNative = command.ExecuteReader();
             while (readerNative.Read())
             {
@@ -77,7 +77,7 @@ namespace Vocrefine_2
 
             // Liste mit Fremd Vokabeln
             List<string> resultTranslation = new List<string>();
-            command.CommandText = String.Format("SELECT * FROM Vocabulary WHERE class={0};", iClass.ToString());
+            command.CommandText = String.Format("SELECT * FROM Vocabulary;");
             var readerTranslation = command.ExecuteReader();
             while (readerTranslation.Read())
             {
