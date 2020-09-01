@@ -152,3 +152,4 @@ C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine 2.csproj.CoreCo
 C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine 2.csproj.CopyComplete
 C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine 2.exe
 C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine 2.pdb
+C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.UserControls.MainSize.VocabularyImporter.resources

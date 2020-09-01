@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using Vocrefine_2.UserControls.MainSize;
 
 namespace Vocrefine_2
 {
@@ -27,6 +28,8 @@ namespace Vocrefine_2
 
             this.BackColor = Miscellaneous.CustomColors.AddVocs;
             pnl_addVocs.BackColor = Miscellaneous.CustomColors.AddVocs;
+
+            AddVocsIsFilled();
         }
 
         /// <summary>
@@ -65,13 +68,14 @@ namespace Vocrefine_2
             if (tb_AddVocs_ES.Text != "" && tb_AddVocs_FS.Text != "")
             {
                 btn_AddVocs_Add.Enabled = true;
-                btn_AddVocs_Add.BackColor = Miscellaneous.CustomColors.AddVocs;
-                btn_AddVocs_Add.ForeColor = Color.White;
+                btn_AddVocs_Add.BackColor = Miscellaneous.CustomColors.CreateNew;
+                btn_AddVocs_Add.ForeColor = Color.WhiteSmoke;
+                btn_AddVocs_Add.FlatAppearance.BorderColor = Color.Black;
             }
             else
             {
                 btn_AddVocs_Add.Enabled = false;
-                btn_AddVocs_Add.BackColor = Color.DarkGray;
+                btn_AddVocs_Add.BackColor = Color.Transparent;
                 btn_AddVocs_Add.ForeColor = Color.Black;
             }
         }
@@ -125,6 +129,12 @@ namespace Vocrefine_2
             tb_AddVocs_ES.Focus();
 
             AddVocsIsFilled();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            VocabularyImporter vocabImporter = new VocabularyImporter(dbFilePath);
+            vocabImporter.Show();
         }
     }
 }

@@ -37,12 +37,14 @@
             this.tb_AddVocs_FS = new System.Windows.Forms.TextBox();
             this.tb_AddVocs_ES = new System.Windows.Forms.TextBox();
             this.lb_AddVocs = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnl_addVocs.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_addVocs
             // 
             this.pnl_addVocs.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.pnl_addVocs.Controls.Add(this.button1);
             this.pnl_addVocs.Controls.Add(this.btn_AddVocs_Add);
             this.pnl_addVocs.Controls.Add(this.lb_AddNew_Warnung);
             this.pnl_addVocs.Controls.Add(this.lb_AddVocs_Switch);
@@ -63,12 +65,12 @@
             this.btn_AddVocs_Add.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_AddVocs_Add.Enabled = false;
             this.btn_AddVocs_Add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_AddVocs_Add.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold);
+            this.btn_AddVocs_Add.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddVocs_Add.ForeColor = System.Drawing.Color.Black;
-            this.btn_AddVocs_Add.Location = new System.Drawing.Point(1814, 394);
+            this.btn_AddVocs_Add.Location = new System.Drawing.Point(1863, 394);
             this.btn_AddVocs_Add.Margin = new System.Windows.Forms.Padding(6);
             this.btn_AddVocs_Add.Name = "btn_AddVocs_Add";
-            this.btn_AddVocs_Add.Size = new System.Drawing.Size(610, 71);
+            this.btn_AddVocs_Add.Size = new System.Drawing.Size(559, 71);
             this.btn_AddVocs_Add.TabIndex = 15;
             this.btn_AddVocs_Add.Text = "VOKABEL HINZUFÜGEN";
             this.btn_AddVocs_Add.UseVisualStyleBackColor = false;
@@ -167,6 +169,18 @@
             this.lb_AddVocs.TabIndex = 8;
             this.lb_AddVocs.Text = "Vokabeln zur Box hinzufügen";
             // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1304, 394);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(540, 71);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Aus Textdatei importieren";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // AddVocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -194,5 +208,6 @@
         private System.Windows.Forms.TextBox tb_AddVocs_FS;
         private System.Windows.Forms.TextBox tb_AddVocs_ES;
         private System.Windows.Forms.Label lb_AddVocs;
+        private System.Windows.Forms.Button button1;
     }
 }

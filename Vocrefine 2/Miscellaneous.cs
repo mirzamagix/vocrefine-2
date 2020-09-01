@@ -65,5 +65,13 @@ namespace Vocrefine_2
             tb_es.Text = string.Join(BoxValues.MULTIPLE_MEANING_SEPERATOR.ToString(), es);
             tb_fs.Text = string.Join(BoxValues.MULTIPLE_MEANING_SEPERATOR.ToString(), fs);
         }
+        public static void DoThisSpaceStuffWithStrings(ref string tb_es, ref string tb_fs)
+        {
+            string[] es = tb_es.Split(BoxValues.MULTIPLE_MEANING_SEPERATOR).Select(email => email.Trim()).ToArray();
+            string[] fs = tb_fs.Split(BoxValues.MULTIPLE_MEANING_SEPERATOR).Select(email => email.Trim()).ToArray();
+
+            tb_es = string.Join(BoxValues.MULTIPLE_MEANING_SEPERATOR.ToString(), es);
+            tb_fs = string.Join(BoxValues.MULTIPLE_MEANING_SEPERATOR.ToString(), fs);
+        }
     }
 }

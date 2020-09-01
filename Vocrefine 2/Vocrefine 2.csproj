@@ -69,6 +69,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Miscellaneous.cs" />
+    <Compile Include="UserControls\MainSize\VocabularyImporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserControls\MainSize\VocabularyImporter.Designer.cs">
+      <DependentUpon>VocabularyImporter.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SmallSize\EditBoxSettings.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MainSize\LearnBox.resx">
       <DependentUpon>LearnBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MainSize\VocabularyImporter.resx">
+      <DependentUpon>VocabularyImporter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\SmallSize\EditBoxSettings.resx">
       <DependentUpon>EditBoxSettings.cs</DependentUpon>
@@ -244,6 +253,7 @@
     <None Include="Resources\clock.png" />
     <None Include="Resources\right.png" />
     <None Include="Resources\wrong.png" />
+    <None Include="Resources\example_import_textfile.png" />
     <Content Include="vocrefine2.ico" />
   </ItemGroup>
   <ItemGroup />
