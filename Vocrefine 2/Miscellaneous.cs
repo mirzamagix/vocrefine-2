@@ -14,7 +14,7 @@ namespace Vocrefine_2
 
         public class CustomColors
         {
-            // Pages
+            // Windows
             public static Color FrontPage { get; } = Color.DarkOrange;
             public static Color AddNew { get; } = Color.Green;
             public static Color CreateNew { get; } = Color.Green;
@@ -38,8 +38,8 @@ namespace Vocrefine_2
         /// <param name="tb_fs"></param>
         public static void DoThisSpaceStuff(ref TextBox tb_es, ref TextBox tb_fs)
         {
-            string[] es = tb_es.Text.Split('|').Select(email => email.Trim()).ToArray();
-            string[] fs = tb_fs.Text.Split('|').Select(email => email.Trim()).ToArray();
+            string[] es = tb_es.Text.Split(_multipleMeaningSeperator).Select(email => email.Trim()).ToArray();
+            string[] fs = tb_fs.Text.Split(_multipleMeaningSeperator).Select(email => email.Trim()).ToArray();
 
             tb_es.Text = string.Join(_multipleMeaningSeperator.ToString(), es);
             tb_fs.Text = string.Join(_multipleMeaningSeperator.ToString(), fs);
