@@ -15,8 +15,6 @@ namespace Vocrefine_2
         Button lastNativeButton = null;
         Button lastTransButton = null;
 
-        string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-        string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
         string dbFilePath;
 
         Dictionary<string, string> Fach1 = new Dictionary<string, string>();
@@ -37,7 +35,7 @@ namespace Vocrefine_2
         {
             InitializeComponent();
 
-            dbFilePath = appdatapath + boxNameFromRecent + ".db";
+            dbFilePath = Miscellaneous.GenealValues.APPDATA_PATH + boxNameFromRecent + ".db";
 
             Fach1 = DBAdapter.GetVocsByClass(dbFilePath, 1);
             Fach2 = DBAdapter.GetVocsByClass(dbFilePath, 2);
@@ -52,12 +50,12 @@ namespace Vocrefine_2
 
             UpdateElements();
 
-            this.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "EditVocs");
-            flp_VocabList.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "EditVocs");
-            gb_Info.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "EditVocs");
-            pnl_Info.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "EditVocs");
-            tb_EigeneSprache.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "EditVocs");
-            tb_Fremdsprache.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "EditVocs");
+            this.BackColor = Miscellaneous.CustomColors.EditVocs;
+            flp_VocabList.BackColor = Miscellaneous.CustomColors.EditVocs;
+            gb_Info.BackColor = Miscellaneous.CustomColors.EditVocs;
+            pnl_Info.BackColor = Miscellaneous.CustomColors.EditVocs;
+            tb_EigeneSprache.BackColor = Miscellaneous.CustomColors.EditVocs;
+            tb_Fremdsprache.BackColor = Miscellaneous.CustomColors.EditVocs;
         }
 
         /// <summary>
@@ -129,7 +127,7 @@ namespace Vocrefine_2
         Button addButton(string sText, string sTag)
         {
             Button b = new Button();
-            b.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "EditVocs");
+            b.BackColor = Miscellaneous.CustomColors.EditVocs;
             b.FlatStyle = FlatStyle.Flat;
             b.Font = new Font("Consolas", 9, FontStyle.Regular);
             b.ForeColor = SystemColors.ControlText;

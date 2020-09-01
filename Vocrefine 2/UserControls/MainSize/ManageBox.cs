@@ -17,8 +17,6 @@ namespace Vocrefine_2
         public delegate void CloseCreateNewEvent(object sender, EventArgs e);
         public CloseCreateNewEvent CloseMeFunction = null;
 
-        string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-        string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Vocrefine 2\\Box\\";
         string boxName = "";
 
         public ManageBox(string boxNameFromRecent)
@@ -26,9 +24,9 @@ namespace Vocrefine_2
             InitializeComponent();
             boxName = boxNameFromRecent;
 
-            this.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "ManageBox");
-            pnl_topboth.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "ManageBox");
-            pnl_botboth.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "ManageBox");
+            this.BackColor = Miscellaneous.CustomColors.ManageBox;
+            pnl_topboth.BackColor = Miscellaneous.CustomColors.ManageBox;
+            pnl_botboth.BackColor = Miscellaneous.CustomColors.ManageBox;
 
             // Reset all Hover Colors
             pnl_Learn.BackColor = Color.White;
@@ -232,8 +230,7 @@ namespace Vocrefine_2
                 "\nWenn sie bestätigen ist dieser Vorgang unumkehrbar! Sind sie sich sicher, dass sie fortfahren möchten?", "Löschen bestätigen", 
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
-                string dbPath = appdatapath + boxName + ".db";
+                string dbPath = Miscellaneous.GenealValues.APPDATA_PATH + boxName + ".db";
 
                 File.Delete(dbPath);
 
@@ -251,8 +248,7 @@ namespace Vocrefine_2
                 "\nSomit geht der gesamte Lernfortschritt verloren. Sind sie sich sicher, dass sie fortfahren möchten?", "Zurücksetzen bestätigen", 
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
-                string dbFilePath = appdatapath + boxName + ".db";
+                string dbFilePath = Miscellaneous.GenealValues.APPDATA_PATH + boxName + ".db";
 
                 SQLiteConnection connection = new SQLiteConnection("Data Source=" + dbFilePath + ";Version=3;");
                 connection.Open();
@@ -284,7 +280,7 @@ namespace Vocrefine_2
 
             if (sfd_ExportDatabase.ShowDialog() == DialogResult.OK)
             {
-                File.Copy(appdatapath + boxName + ".db", sfd_ExportDatabase.FileName, true);
+                File.Copy(Miscellaneous.GenealValues.APPDATA_PATH + boxName + ".db", sfd_ExportDatabase.FileName, true);
 
                 MessageBox.Show("Die Box '" + boxName + "' wurde erfolgreich exportiert!");
             }

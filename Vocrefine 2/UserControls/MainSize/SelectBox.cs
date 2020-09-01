@@ -16,9 +16,7 @@ namespace Vocrefine_2
     {
         public delegate void CloseCreateNewEvent(object sender, EventArgs e);
         public CloseCreateNewEvent CloseMeFunction = null;
-
-        string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-        string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
+        
         string selectedElement = "";
 
         Button lastSelected = new Button();
@@ -27,7 +25,7 @@ namespace Vocrefine_2
         {
             InitializeComponent();
 
-            DirectoryInfo ParentDirectory = new System.IO.DirectoryInfo(appdatapath);
+            DirectoryInfo ParentDirectory = new System.IO.DirectoryInfo(Miscellaneous.GenealValues.APPDATA_PATH);
             foreach (FileInfo f in ParentDirectory.GetFiles())
             {
                 Button b = addButton(f.Name.Substring(0, f.Name.Length - 3));
@@ -68,14 +66,14 @@ namespace Vocrefine_2
             lastSelected.BackColor = Color.White;
             lastSelected.ForeColor = Color.Black;
             ((Button)sender).BackColor = SystemColors.Control;
-            ((Button)sender).ForeColor = DBAdapter.GetSettingsColorEntry(settingspath, "SelectBox");
+            ((Button)sender).ForeColor = Miscellaneous.CustomColors.SelectBox;
             lastSelected = ((Button)sender);
             selectedElement = ((Button)sender).Text;
             lb_name.Text = selectedElement;
 
             getInformations(selectedElement);
 
-            if (pnl_continue.BackColor == Color.Gray) pnl_continue.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "SelectBox");
+            if (pnl_continue.BackColor == Color.Gray) pnl_continue.BackColor = Miscellaneous.CustomColors.SelectBox;
         }
 
         /// <summary>
@@ -87,7 +85,7 @@ namespace Vocrefine_2
             lb_Info_Title.Text = "INFORMATIONEN ZUR AUSGEWÄHLTEN BOX:";
             pnl_Info.Visible = true;
 
-            string dbFilePath = appdatapath + sName + ".db";
+            string dbFilePath = Miscellaneous.GenealValues.APPDATA_PATH + sName + ".db";
 
             lb_ES.Text = DBAdapter.GetLabelEntry(dbFilePath, "nativeLanguage");
             lb_FS.Text = DBAdapter.GetLabelEntry(dbFilePath, "translationLanguage");
@@ -115,7 +113,7 @@ namespace Vocrefine_2
         /// <param name="e"></param>
         private void act_Continue(object sender, EventArgs e)
         {
-            if (pnl_continue.BackColor == DBAdapter.GetSettingsColorEntry(settingspath, "SelectBox"))
+            if (pnl_continue.BackColor == Miscellaneous.CustomColors.SelectBox)
             {
                 CloseMeFunction?.Invoke(this, null);
             }

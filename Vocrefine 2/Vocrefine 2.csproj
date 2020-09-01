@@ -112,12 +112,6 @@
     <Compile Include="UserControls\MainSize\SelectBox.Designer.cs">
       <DependentUpon>SelectBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\SmallSize\InfoAbout.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\SmallSize\InfoAbout.Designer.cs">
-      <DependentUpon>InfoAbout.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\MainSize\AddNew.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,9 +164,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MainSize\SelectBox.resx">
       <DependentUpon>SelectBox.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\SmallSize\InfoAbout.resx">
-      <DependentUpon>InfoAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MainSize\AddNew.resx">
       <DependentUpon>AddNew.cs</DependentUpon>

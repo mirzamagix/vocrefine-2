@@ -15,9 +15,7 @@ namespace Vocrefine_2
     {
         public delegate void CloseCreateNewEvent(object sender, EventArgs e);
         public CloseCreateNewEvent CloseMeFunction = null;
-
-        string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-        string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
+        
         string dbFilePath;
 
         Dictionary<string, string>[] Fach = new Dictionary<string, string>[11];
@@ -34,7 +32,7 @@ namespace Vocrefine_2
         {
             InitializeComponent();
 
-            dbFilePath = appdatapath + boxNameFromRecent + ".db";
+            dbFilePath = Miscellaneous.GenealValues.APPDATA_PATH + boxNameFromRecent + ".db";
             lb_Title.Text = boxNameFromRecent;
 
             startWindow = DateTime.Now;
@@ -74,7 +72,7 @@ namespace Vocrefine_2
             NextExercise(); 
             UpdateClassVisibility();
 
-            sts_info.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "LearnBox");
+            sts_info.BackColor = Miscellaneous.CustomColors.LearnBox;
         }
 
         /// <summary>
@@ -375,7 +373,7 @@ namespace Vocrefine_2
                     if (!cb_GrossKleinSchreibung.Checked) writtenAnswer = writtenAnswer.ToLower();
 
                     // Aufteilung in mehrere Bedeutungen für das selbe Wort
-                    if (withoutComment.Split(Miscellaneous._multipleMeaningSeperator).Contains(writtenAnswer)) wasRight = true;
+                    if (withoutComment.Split(Miscellaneous.BoxValues.MULTIPLE_MEANING_SEPERATOR).Contains(writtenAnswer)) wasRight = true;
                     else wasRight = false;
 
                     tb_Fremdsprache.Text = string.Join(" | ", withoutComment.Split('|'));
@@ -389,7 +387,7 @@ namespace Vocrefine_2
                     if (!cb_GrossKleinSchreibung.Checked) writtenAnswer = writtenAnswer.ToLower();
 
                     // Aufteilung in mehrere Bedeutungen für das selbe Wort
-                    if (withoutComment.Split(Miscellaneous._multipleMeaningSeperator).Contains(writtenAnswer)) wasRight = true;
+                    if (withoutComment.Split(Miscellaneous.BoxValues.MULTIPLE_MEANING_SEPERATOR).Contains(writtenAnswer)) wasRight = true;
                     else wasRight = false;
 
                     tb_EigeneSprache.Text = string.Join(" | ", withoutComment.Split('|'));

@@ -95,7 +95,7 @@
             this.pnl_topside.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pnl_topside.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_topside.Location = new System.Drawing.Point(0, 0);
-            this.pnl_topside.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pnl_topside.Margin = new System.Windows.Forms.Padding(6);
             this.pnl_topside.Name = "pnl_topside";
             this.pnl_topside.Size = new System.Drawing.Size(2556, 1191);
             this.pnl_topside.TabIndex = 1;
@@ -108,7 +108,7 @@
             this.pnl_CaptionBar.Controls.Add(this.lb_Minimize);
             this.pnl_CaptionBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_CaptionBar.Location = new System.Drawing.Point(0, 0);
-            this.pnl_CaptionBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pnl_CaptionBar.Margin = new System.Windows.Forms.Padding(6);
             this.pnl_CaptionBar.Name = "pnl_CaptionBar";
             this.pnl_CaptionBar.Size = new System.Drawing.Size(2556, 69);
             this.pnl_CaptionBar.TabIndex = 23;
@@ -116,7 +116,7 @@
             // pnl_DragBar
             // 
             this.pnl_DragBar.Location = new System.Drawing.Point(194, 6);
-            this.pnl_DragBar.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pnl_DragBar.Margin = new System.Windows.Forms.Padding(6);
             this.pnl_DragBar.Name = "pnl_DragBar";
             this.pnl_DragBar.Size = new System.Drawing.Size(2244, 58);
             this.pnl_DragBar.TabIndex = 20;
@@ -166,12 +166,12 @@
             // 
             // comb_Fremdsprache
             // 
+            this.comb_Fremdsprache.BackColor = System.Drawing.SystemColors.Control;
             this.comb_Fremdsprache.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comb_Fremdsprache.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comb_Fremdsprache.ForeColor = System.Drawing.SystemColors.Highlight;
             this.comb_Fremdsprache.FormattingEnabled = true;
             this.comb_Fremdsprache.Items.AddRange(new object[] {
-            "Manuell eingeben >>",
             "Albanisch (Toskisch)",
             "Arabisch",
             "Armenisch",
@@ -209,6 +209,7 @@
             "Litauisch",
             "Makedonisch",
             "Maltesisch",
+            "Manuell eingeben >>",
             "Moldauisch",
             "Mongolisch",
             "Neugriechisch",
@@ -237,21 +238,22 @@
             "Usbekisch",
             "Vietnamesisch"});
             this.comb_Fremdsprache.Location = new System.Drawing.Point(404, 471);
-            this.comb_Fremdsprache.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comb_Fremdsprache.Margin = new System.Windows.Forms.Padding(6);
             this.comb_Fremdsprache.Name = "comb_Fremdsprache";
             this.comb_Fremdsprache.Size = new System.Drawing.Size(440, 53);
+            this.comb_Fremdsprache.Sorted = true;
             this.comb_Fremdsprache.TabIndex = 17;
             this.comb_Fremdsprache.Text = "Manuell eingeben >>";
             this.comb_Fremdsprache.TextChanged += new System.EventHandler(this.act_IsFilled);
             // 
             // comb_EigeneSprache
             // 
+            this.comb_EigeneSprache.BackColor = System.Drawing.SystemColors.Control;
             this.comb_EigeneSprache.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.comb_EigeneSprache.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comb_EigeneSprache.ForeColor = System.Drawing.SystemColors.Highlight;
             this.comb_EigeneSprache.FormattingEnabled = true;
             this.comb_EigeneSprache.Items.AddRange(new object[] {
-            "Manuell eingeben >>",
             "Albanisch (Toskisch)",
             "Arabisch",
             "Armenisch",
@@ -289,6 +291,7 @@
             "Litauisch",
             "Makedonisch",
             "Maltesisch",
+            "Manuell eingeben >>",
             "Moldauisch",
             "Mongolisch",
             "Neugriechisch",
@@ -317,9 +320,10 @@
             "Usbekisch",
             "Vietnamesisch"});
             this.comb_EigeneSprache.Location = new System.Drawing.Point(404, 375);
-            this.comb_EigeneSprache.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.comb_EigeneSprache.Margin = new System.Windows.Forms.Padding(6);
             this.comb_EigeneSprache.Name = "comb_EigeneSprache";
             this.comb_EigeneSprache.Size = new System.Drawing.Size(440, 53);
+            this.comb_EigeneSprache.Sorted = true;
             this.comb_EigeneSprache.TabIndex = 17;
             this.comb_EigeneSprache.Text = "Manuell eingeben >>";
             this.comb_EigeneSprache.TextChanged += new System.EventHandler(this.act_IsFilled);
@@ -348,7 +352,7 @@
             this.pnl_addVocs.Controls.Add(this.tb_AddVocs_ES);
             this.pnl_addVocs.Controls.Add(this.lb_AddVocs);
             this.pnl_addVocs.Location = new System.Drawing.Point(32, 613);
-            this.pnl_addVocs.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pnl_addVocs.Margin = new System.Windows.Forms.Padding(6);
             this.pnl_addVocs.Name = "pnl_addVocs";
             this.pnl_addVocs.Size = new System.Drawing.Size(2488, 546);
             this.pnl_addVocs.TabIndex = 14;
@@ -363,7 +367,7 @@
             this.btn_AddVocs_Add.Font = new System.Drawing.Font("Eras Demi ITC", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddVocs_Add.ForeColor = System.Drawing.Color.White;
             this.btn_AddVocs_Add.Location = new System.Drawing.Point(1942, 398);
-            this.btn_AddVocs_Add.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.btn_AddVocs_Add.Margin = new System.Windows.Forms.Padding(6);
             this.btn_AddVocs_Add.Name = "btn_AddVocs_Add";
             this.btn_AddVocs_Add.Size = new System.Drawing.Size(482, 71);
             this.btn_AddVocs_Add.TabIndex = 15;
@@ -405,7 +409,7 @@
             // 
             this.lb_AddVocs_FS.AutoSize = true;
             this.lb_AddVocs_FS.Font = new System.Drawing.Font("Eras Medium ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_AddVocs_FS.Location = new System.Drawing.Point(1316, 282);
+            this.lb_AddVocs_FS.Location = new System.Drawing.Point(1300, 278);
             this.lb_AddVocs_FS.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_AddVocs_FS.Name = "lb_AddVocs_FS";
             this.lb_AddVocs_FS.Size = new System.Drawing.Size(269, 44);
@@ -416,7 +420,7 @@
             // 
             this.lb_AddVocs_ES.AutoSize = true;
             this.lb_AddVocs_ES.Font = new System.Drawing.Font("Eras Medium ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_AddVocs_ES.Location = new System.Drawing.Point(68, 282);
+            this.lb_AddVocs_ES.Location = new System.Drawing.Point(52, 278);
             this.lb_AddVocs_ES.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lb_AddVocs_ES.Name = "lb_AddVocs_ES";
             this.lb_AddVocs_ES.Size = new System.Drawing.Size(289, 44);
@@ -428,7 +432,7 @@
             this.tb_AddVocs_FS.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_AddVocs_FS.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tb_AddVocs_FS.Location = new System.Drawing.Point(1304, 330);
-            this.tb_AddVocs_FS.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tb_AddVocs_FS.Margin = new System.Windows.Forms.Padding(6);
             this.tb_AddVocs_FS.MaxLength = 60;
             this.tb_AddVocs_FS.Name = "tb_AddVocs_FS";
             this.tb_AddVocs_FS.Size = new System.Drawing.Size(1116, 50);
@@ -441,7 +445,7 @@
             this.tb_AddVocs_ES.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_AddVocs_ES.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tb_AddVocs_ES.Location = new System.Drawing.Point(56, 330);
-            this.tb_AddVocs_ES.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tb_AddVocs_ES.Margin = new System.Windows.Forms.Padding(6);
             this.tb_AddVocs_ES.MaxLength = 60;
             this.tb_AddVocs_ES.Name = "tb_AddVocs_ES";
             this.tb_AddVocs_ES.Size = new System.Drawing.Size(1116, 50);
@@ -466,7 +470,7 @@
             this.tb_Fremdsprache.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Fremdsprache.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tb_Fremdsprache.Location = new System.Drawing.Point(860, 471);
-            this.tb_Fremdsprache.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tb_Fremdsprache.Margin = new System.Windows.Forms.Padding(6);
             this.tb_Fremdsprache.MaxLength = 30;
             this.tb_Fremdsprache.Name = "tb_Fremdsprache";
             this.tb_Fremdsprache.Size = new System.Drawing.Size(1592, 50);
@@ -490,7 +494,7 @@
             this.tb_EigeneSprache.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_EigeneSprache.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tb_EigeneSprache.Location = new System.Drawing.Point(860, 375);
-            this.tb_EigeneSprache.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tb_EigeneSprache.Margin = new System.Windows.Forms.Padding(6);
             this.tb_EigeneSprache.MaxLength = 30;
             this.tb_EigeneSprache.Name = "tb_EigeneSprache";
             this.tb_EigeneSprache.Size = new System.Drawing.Size(1592, 50);
@@ -514,7 +518,7 @@
             this.tb_Name.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Name.ForeColor = System.Drawing.SystemColors.WindowText;
             this.tb_Name.Location = new System.Drawing.Point(404, 279);
-            this.tb_Name.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.tb_Name.Margin = new System.Windows.Forms.Padding(6);
             this.tb_Name.MaxLength = 30;
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(2048, 50);
@@ -553,7 +557,7 @@
             this.pnl_save.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pnl_save.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnl_save.Location = new System.Drawing.Point(0, 1191);
-            this.pnl_save.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.pnl_save.Margin = new System.Windows.Forms.Padding(6);
             this.pnl_save.Name = "pnl_save";
             this.pnl_save.Size = new System.Drawing.Size(2556, 190);
             this.pnl_save.TabIndex = 0;
@@ -566,7 +570,7 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pnl_topside);
             this.Controls.Add(this.pnl_save);
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "CreateNew";
             this.Size = new System.Drawing.Size(2556, 1381);
             this.pnl_topside.ResumeLayout(false);

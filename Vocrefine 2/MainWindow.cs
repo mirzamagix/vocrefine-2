@@ -15,8 +15,6 @@ namespace Vocrefine_2
 {
     public partial class MainWindow : Form
     {
-        string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-
         FrontPage       frontPage;
         AddNew          addNew;
         CreateNew       createNew;
@@ -65,28 +63,7 @@ namespace Vocrefine_2
             InitializeComponent();
             Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 10, 10));
 
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
-            if (!Directory.Exists(path)) Directory.CreateDirectory(path);
-
-            string settingsDirectoryPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\";
-            if (!Directory.Exists(settingsDirectoryPath))
-            {
-                Directory.CreateDirectory(settingsDirectoryPath);
-
-                DBAdapter.CreateSettingsDatabase(settingspath);
-                DBAdapter.AddSettingsColor(settingspath, "FrontPage", Miscellaneous.CustomColors.FrontPage);
-                DBAdapter.AddSettingsColor(settingspath, "AddNew", Miscellaneous.CustomColors.AddNew);
-                DBAdapter.AddSettingsColor(settingspath, "CreateNew", Miscellaneous.CustomColors.CreateNew);
-                DBAdapter.AddSettingsColor(settingspath, "SelectBox", Miscellaneous.CustomColors.SelectBox);
-                DBAdapter.AddSettingsColor(settingspath, "ManageBox", Miscellaneous.CustomColors.ManageBox);
-                DBAdapter.AddSettingsColor(settingspath, "AddVocs", Miscellaneous.CustomColors.AddVocs);
-                DBAdapter.AddSettingsColor(settingspath, "EditVocs", Miscellaneous.CustomColors.EditVocs);
-                DBAdapter.AddSettingsColor(settingspath, "LearnBox", Miscellaneous.CustomColors.LearnBox);
-                DBAdapter.AddSettingsColor(settingspath, "EditBoxSetiings", Miscellaneous.CustomColors.EditBoxSettings);
-            }
-
             frontPage = new FrontPage();
-
             frontPage.Dock = DockStyle.Fill;
             frontPage.pnl_Background_AddNew.Click           += new EventHandler(act_ShowAddNew);
             frontPage.pb_AddNew.Click                       += new EventHandler(act_ShowAddNew);
@@ -95,7 +72,6 @@ namespace Vocrefine_2
             frontPage.lb_Minimize.Click                     += new EventHandler(act_Minimize);
             frontPage.lb_AboutInfo.Click                    += new EventHandler(act_ShowCredits);
             frontPage.pb_Settings.Click                     += new EventHandler(act_ShowSettings);
-
             frontPage.pnl_DragBar_Left.MouseDown            += new MouseEventHandler(act_DragBar);
             frontPage.pnl_DragBar_Right.MouseDown           += new MouseEventHandler(act_DragBar);
 
@@ -128,12 +104,7 @@ namespace Vocrefine_2
             }
         }
 
-
-        /// <summary>
-        /// Sets Screen to Front Page
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        // Windows
         private void act_ShowFrontPage(object sender, EventArgs e)
         {
             frontPage = new FrontPage();
@@ -153,12 +124,6 @@ namespace Vocrefine_2
             pnl_View.Controls.Clear();
             pnl_View.Controls.Add(frontPage);
         }
-
-        /// <summary>
-        /// Starts "AddNew" Window
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void act_ShowAddNew(object sender, EventArgs e)
         {
             addNew = new AddNew();
@@ -176,12 +141,6 @@ namespace Vocrefine_2
             pnl_View.Controls.Clear();
             pnl_View.Controls.Add(addNew);
         }
-
-        /// <summary>
-        /// Starts "CreateNew" Window
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void act_ShowCreateNew(object sender, EventArgs e)
         {
             createNew = new CreateNew();
@@ -196,12 +155,6 @@ namespace Vocrefine_2
             pnl_View.Controls.Clear();
             pnl_View.Controls.Add(createNew);
         }
-
-        /// <summary>
-        /// Starts "SelectBox" Window
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void act_ShowSelectBox(object sender, EventArgs e)
         {
             selectBox = new SelectBox();
@@ -216,12 +169,6 @@ namespace Vocrefine_2
             pnl_View.Controls.Clear();
             pnl_View.Controls.Add(selectBox);
         }
-
-        /// <summary>
-        /// Starts "ManageBox" Window
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void act_ShowManageBox(object sender, EventArgs e)
         {
             manageBox = new ManageBox(selectBox.lb_name.Text);
@@ -246,12 +193,6 @@ namespace Vocrefine_2
             pnl_View.Controls.Clear();
             pnl_View.Controls.Add(manageBox);
         }
-
-        /// <summary>
-        /// Starts "EditBox" Window
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void act_ShowEditBox(object sender, EventArgs e)
         {
             editBox = new EditBox(selectBox.lb_name.Text);
@@ -265,12 +206,6 @@ namespace Vocrefine_2
             pnl_View.Controls.Clear();
             pnl_View.Controls.Add(editBox);
         }
-
-        /// <summary>
-        /// Starts "LearnBox" Window
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void act_ShowLearnBox(object sender, EventArgs e)
         {
             learnBox = new LearnBox(selectBox.lb_name.Text);
@@ -285,12 +220,6 @@ namespace Vocrefine_2
             pnl_View.Controls.Clear();
             pnl_View.Controls.Add(learnBox);
         }
-
-        /// <summary>
-        /// Shows Settings
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void act_ShowSettings(object sender, EventArgs e)
         {
             settingsPage = new SettingsPage();
@@ -304,33 +233,9 @@ namespace Vocrefine_2
             pnl_View.Controls.Clear();
             pnl_View.Controls.Add(settingsPage);
         }
-
-        /// <summary>
-        /// Shows Information
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void act_ShowCredits(object sender, EventArgs e)
         {
-            InfoAbout infoAbout = new InfoAbout();
-            infoAbout.Dock = DockStyle.Fill;
-
-            Panel pnl_Fill = new Panel();
-            pnl_Fill.Dock = DockStyle.Fill;
-            pnl_Fill.Controls.Add(infoAbout);
-
-            Form frmCredits = new Form();
-            frmCredits.FormBorderStyle = FormBorderStyle.FixedSingle;
-            frmCredits.MaximizeBox = false;
-            frmCredits.MinimizeBox = false;
-            frmCredits.ShowIcon = false;
-            frmCredits.ShowInTaskbar = false;
-            frmCredits.Size = new Size(460, 190);
-            frmCredits.StartPosition = FormStartPosition.CenterScreen;
-            frmCredits.Text = "Information & About";
-            frmCredits.Controls.Add(pnl_Fill);
-
-            frmCredits.Show();
+            System.Diagnostics.Process.Start("https://github.com/mirzamagix/vocrefine-2");
         }
         
     }

@@ -18,8 +18,6 @@ namespace Vocrefine_2
         public delegate void CloseCreateNewEvent(object sender, EventArgs e);
         public CloseCreateNewEvent CloseMeFunction = null;
 
-        string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-
         string s_NameDerBox = "";
         string s_EigeneSprache = "";
         string s_Fremdsprache = "";
@@ -58,7 +56,7 @@ namespace Vocrefine_2
                     if (comb_Fremdsprache.Text == "Manuell eingeben >>" && tb_Fremdsprache.Text == "") pnl_save.BackColor = Color.Gray;
                     else
                     {
-                        pnl_save.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "CreateNew");
+                        pnl_save.BackColor = Miscellaneous.CustomColors.CreateNew;
                     }
                 }
             }
@@ -98,7 +96,7 @@ namespace Vocrefine_2
             if (tb_AddVocs_ES.Text != "" && tb_AddVocs_FS.Text != "")
             {
                 btn_AddVocs_Add.Enabled = true;
-                btn_AddVocs_Add.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "CreateNew");
+                btn_AddVocs_Add.BackColor = Miscellaneous.CustomColors.CreateNew;
             }
             else
             {
@@ -182,12 +180,11 @@ namespace Vocrefine_2
         /// <param name="e"></param>
         private void act_saveBox(object sender, EventArgs e)
         {
-            if (pnl_save.BackColor == DBAdapter.GetSettingsColorEntry(settingspath, "CreateNew"))
+            if (pnl_save.BackColor == DBAdapter.GetSettingsColorEntry(Miscellaneous.GenealValues.SETTINGS_FILE_PATH, "CreateNew"))
             {
                 if (!pnl_addVocs.Visible)
                 {
-                    string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
-                    if (!File.Exists(appdatapath + tb_Name.Text + ".db"))
+                    if (!File.Exists(Miscellaneous.GenealValues.APPDATA_PATH + tb_Name.Text + ".db"))
                     {
                         tb_Name.Enabled = false;
                         tb_EigeneSprache.Enabled = false;
@@ -216,8 +213,7 @@ namespace Vocrefine_2
                 }
                 else
                 {
-                    string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
-                    string dbFilePath = appdatapath + s_NameDerBox + ".db";
+                    string dbFilePath = Miscellaneous.GenealValues.APPDATA_PATH + s_NameDerBox + ".db";
 
                     DBAdapter.CreateDatabase(dbFilePath);
                     DBAdapter.AddLabel(dbFilePath, "nativeLanguage", s_EigeneSprache);

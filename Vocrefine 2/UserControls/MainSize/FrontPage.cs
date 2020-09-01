@@ -18,10 +18,9 @@ namespace Vocrefine_2
 
         public FrontPage()
         {
-            InitializeComponent();
-
-            string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-            this.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "FrontPage");
+            InitializeComponent(); 
+            
+            this.BackColor = Miscellaneous.CustomColors.FrontPage;
         }
 
         // Hover change
@@ -75,10 +74,7 @@ namespace Vocrefine_2
         /// <param name="e"></param>
         private void act_Click_OpenExisting(object sender, EventArgs e)
         {
-            string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
-            DirectoryInfo ParentDirectory = new System.IO.DirectoryInfo(appdatapath);
-
-            if (ParentDirectory.GetFiles().Length != 0) CloseMeFunction?.Invoke(this, null);
+            if (new DirectoryInfo(Miscellaneous.GenealValues.APPDATA_PATH).GetFiles().Length != 0) CloseMeFunction?.Invoke(this, null);
             else MessageBox.Show(
                 "Du hast noch keine Box erstellt. Gehe zu 'Neue Box hinzufügen' um eine Box hinzuzufügen.", 
                 "Keine Box vorhanden", 

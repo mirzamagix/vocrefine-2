@@ -17,8 +17,7 @@ namespace Vocrefine_2
         {
             InitializeComponent();
 
-            string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-            this.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "AddNew");
+            this.BackColor = Miscellaneous.CustomColors.AddNew;
         }
 
         // Hover change
@@ -77,9 +76,7 @@ namespace Vocrefine_2
             if (ofd_CopyFile.ShowDialog() == DialogResult.OK)
             {
                 string[] parts = ofd_CopyFile.FileName.Split('\\');
-                string copyname = parts[parts.Length - 1];
-                string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\Vocrefine 2\\Box\\";
-                File.Copy(ofd_CopyFile.FileName, appdatapath + copyname, true);
+                string copyname = parts[parts.Length - 1];File.Copy(ofd_CopyFile.FileName, Miscellaneous.GenealValues.APPDATA_PATH + copyname, true);
 
                 MessageBox.Show("Die Box \"" + copyname.Substring(0, copyname.Length - 4) + "\" wurde erfolgreich importiert!");
             }

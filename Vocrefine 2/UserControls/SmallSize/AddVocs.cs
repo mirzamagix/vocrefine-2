@@ -13,22 +13,20 @@ namespace Vocrefine_2
 {
     public partial class AddVocs : UserControl
     {
-        string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-        string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
         string dbFilePath;
 
         public AddVocs(string boxNameFromRecent)
         {
             InitializeComponent();
 
-            dbFilePath = appdatapath + boxNameFromRecent + ".db";
+            dbFilePath = Miscellaneous.GenealValues.APPDATA_PATH + boxNameFromRecent + ".db";
             lb_AddVocs.Text = "Vokabeln hinzufügen zur Box: " + boxNameFromRecent;
 
             lb_AddVocs_ES.Text = DBAdapter.GetLabelEntry(dbFilePath, "nativeLanguage") + ":";
             lb_AddVocs_FS.Text = DBAdapter.GetLabelEntry(dbFilePath, "translationLanguage") + ":";
 
-            this.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "AddVocs");
-            pnl_addVocs.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "AddVocs");
+            this.BackColor = Miscellaneous.CustomColors.AddVocs;
+            pnl_addVocs.BackColor = Miscellaneous.CustomColors.AddVocs;
         }
 
         /// <summary>
@@ -67,7 +65,7 @@ namespace Vocrefine_2
             if (tb_AddVocs_ES.Text != "" && tb_AddVocs_FS.Text != "")
             {
                 btn_AddVocs_Add.Enabled = true;
-                btn_AddVocs_Add.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "CreateNew");
+                btn_AddVocs_Add.BackColor = Miscellaneous.CustomColors.AddVocs;
                 btn_AddVocs_Add.ForeColor = Color.White;
             }
             else

@@ -13,15 +13,13 @@ namespace Vocrefine_2
 {
     public partial class EditBoxSettings : UserControl
     {
-        string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-        string appdatapath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Box\";
         string dbFilePath;
 
         public EditBoxSettings(string boxNameFromRecent)
         {
             InitializeComponent();
 
-            dbFilePath = appdatapath + boxNameFromRecent + ".db";
+            dbFilePath = Miscellaneous.GenealValues.APPDATA_PATH + boxNameFromRecent + ".db";
 
             tb_Name.Text = boxNameFromRecent;
             tb_EigeneSprache.Text = DBAdapter.GetLabelEntry(dbFilePath, "nativeLanguage");
@@ -45,7 +43,7 @@ namespace Vocrefine_2
             DBAdapter.UpdateLabel(dbFilePath, "nativeLanguage", tb_EigeneSprache.Text);
             DBAdapter.UpdateLabel(dbFilePath, "translationLanguage", tb_Fremdsprache.Text);
 
-            File.Move(dbFilePath, appdatapath + tb_Name.Text + ".db");
+            File.Move(dbFilePath, Miscellaneous.GenealValues.APPDATA_PATH + tb_Name.Text + ".db");
 
             Application.Restart();
         }

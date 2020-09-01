@@ -13,8 +13,6 @@ namespace Vocrefine_2
 {
     public partial class EditBox : UserControl
     {
-        string settingspath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Vocrefine 2\Settings\Settings.db";
-
         string boxName = "";
         int currentPage = 1;
 
@@ -30,9 +28,9 @@ namespace Vocrefine_2
             pnl_View.Controls.Clear();
             pnl_View.Controls.Add(addVocs);
 
-            pnl_AddVocs.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "AddVocs");
-            pnl_EditVocs.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "EditVocs");
-            pnl_CaptionBar.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "AddVocs");
+            pnl_AddVocs.BackColor = Miscellaneous.CustomColors.AddVocs;
+            pnl_EditVocs.BackColor = Miscellaneous.CustomColors.EditVocs;
+            pnl_CaptionBar.BackColor = Miscellaneous.CustomColors.AddVocs;
         }
 
         /// <summary>
@@ -63,7 +61,7 @@ namespace Vocrefine_2
                 pnl_AddVocs.BorderStyle = BorderStyle.None;
                 pnl_EditVocs.BorderStyle = BorderStyle.FixedSingle;
                 pnl_EditBoxSettings.BorderStyle = BorderStyle.FixedSingle;
-                pnl_CaptionBar.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "AddVocs");
+                pnl_CaptionBar.BackColor = Miscellaneous.CustomColors.AddVocs;
                 currentPage = 1;
             }
         }
@@ -86,7 +84,7 @@ namespace Vocrefine_2
                 pnl_EditVocs.BorderStyle = BorderStyle.None;
                 pnl_AddVocs.BorderStyle = BorderStyle.FixedSingle;
                 pnl_EditBoxSettings.BorderStyle = BorderStyle.FixedSingle;
-                pnl_CaptionBar.BackColor = DBAdapter.GetSettingsColorEntry(settingspath, "EditVocs");
+                pnl_CaptionBar.BackColor = Miscellaneous.CustomColors.EditVocs;
                 currentPage = 2;
             }
         }

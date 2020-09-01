@@ -141,7 +141,6 @@ C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.EditVocs.reso
 C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.AddVocs.resources
 C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.EditBox.resources
 C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.SelectBox.resources
-C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.InfoAbout.resources
 C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.AddNew.resources
 C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.CreateNew.resources
 C:\PROJEKTE\GITHUB\vocrefine-2\Vocrefine 2\obj\Release\Vocrefine_2.FrontPage.resources
